@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulario</title>
+    </head>
+    <body>
+        <form action="pagina.php" method="post">
+            <fieldset>
+                <legend>Dados pessoais</legend>
+                <label>Nome:</label>
+                <input name="nome" type="text" placeholder="Informe seu nome"><br>
+                <label>Endereço:</label>
+                <input name="endereço" type="text" placeholder="Informe seu endereço"><br>
+                <label>Estado:</label>
+                <select name="estado">
+                    <option>Amazonas</option>
+                    <option>Pará</option>
+                    <option>São Paulo</option>
+                    <option>Paraná</option>
+                    <option>Minas Gerais</option>
+                    <option>Alagoas</option>
+                </select>
+                <br>
+                <label>Data de nascimento:</label>
+                <input type="date" name="datan"/>
+                <br>
+            </fieldset>
+            <fieldset>
+                <legend>Dados profissionais</legend>
+                <label>Natureza do cargo:</label>
+                <input type="radio" name="cargo" value="gerencia" checked>/gerencia
+                <input type="radio" name="cargo" value="financeiro" checked>/financeiro
+                <input type="radio" name="cargo" value="recepção" checked>/recepção
+                <input type="radio" name="cargo" value="juridico" checked>/juridico
+                <br><br>
+
+                <label>Área de interesse</label>
+                <input type="radio" name="area" value="Computação" checked>/Computação
+                <input type="radio" name="cargo" value="Biologia" checked>/Biologia
+                <input type="radio" name="cargo" value="Recepção" checked>/Recepção
+                <input type="radio" name="cargo" value="Administrativo" checked>/Administrativo
+                <input type="radio" name="cargo" value="Jurídico" checked>/Jurídico
+                <br>
+
+                <label>Mini-Curriculo</label>
+                <textarea name="minicurriculo" cols="80" rows="15"
+                placeholder="Nos informe sobre você"></textarea><br><br>
+                <label>Satisfação:</label><br>
+                Não satisfeito <input type="range" name="satisfacao"
+                min="0" max="10"/>Satisfeito
+            </fieldset>
+        </form>
+    </body>
+</html>
