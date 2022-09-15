@@ -5,7 +5,12 @@ public class User {
 	int age;
 	String phoneNumber;
 	String email;
-	String teste;
+	protected Address address;
+	String password;
+	
+	public User() {
+		
+	}
 	public String getName() {
 		return name;
 	}
@@ -30,10 +35,39 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	public Address getAddress() {
+		return address;
+	}
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public User(String name, int age, String phoneNumber, String email, Address address) {
+		this.name = name;
+		this.age = age;
+		this.phoneNumber = phoneNumber;
+		this.email = email;
+		this.address = address;
+	}
 	@Override
 	public String toString() {
-		return "User [name=" + name + ", age=" + age + ", phoneNumber=" + phoneNumber + ", email=" + email + ", teste="
-				+ teste + "]";
+		return "User [name=" + name + ", age=" + age + ", phoneNumber=" + phoneNumber + ", email=" + email
+				+ ", address=" + address + "]";
+	}
+	public boolean autenticar(String password) {
+		if(this.password == password) {
+			System.out.println("Acesso permitido");
+			return true;
+		}else {
+			System.out.println("Acesso negado");
+			return false;
+		}
+		
 	}
 	
 }
